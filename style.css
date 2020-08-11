@@ -10,7 +10,8 @@ body {
 
 .container-flex {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: vertical; */
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -20,13 +21,34 @@ body {
   border: 2px solid blue;
 }
 
-@media screen and (min-width: 401px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .container-flex {
-    flex-direction: vertical;
+    /* flex-direction: vertical; */
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .box {
-    width: 32%;
+    width: 100%;
     border: 2px solid red;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 756px) {
+  .container-flex {
+    /* flex-direction: vertical; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .box {
+    border: 2px solid green;
+  }
+  #one {
+    width: 48%;
+  }
+  #two {
+    width: 48%;
+  }
+  #three {
+    width: 100%;
   }
 }
